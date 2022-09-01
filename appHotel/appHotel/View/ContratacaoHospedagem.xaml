@@ -1,10 +1,78 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="appHotel.View.ContratacaoHospedagem">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
+             x:Class="appHotel.View.ContratacaoHospedagem"
+             BackgroundColor="DarkGoldenrod">
+             
+    <ContentView.Content>
+      <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Cálculo da Diária" Style="{StaticResource Título}"/>
+
+            <Frame Margin="10">
+                <StackLayout>
+                    <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *, 2*">
+                        <Label Grid.Row="0" Grid.Column="0" Text="Adultos:"/>
+                        <Label Grid.Row="0" Grid.Column="1"
+                               Text="{Binding Value}"
+                               BindingContext="{x:Reference stp_adultos}"
+                               Style="{StaticResource Valores}"/>
+
+                        <Stepper Grid.Row="0" Grid.Column="2"
+                                 Minimum="0"
+                                 Maximum="10"
+                                 x:Name=" stp_adultos"/>
+
+                        <Label Grid.Row="1" Grid.Column="0"
+                               Text="Crianças"/>
+
+                        <Label Grid.Row="1" Grid.Column="1"
+                               Text="{Binding Value}"
+                                BindingContext="{x:Reference stp_criancas}"
+                               Style="{StaticResource Valores}"/>
+
+                        <Stepper Grid.Row="1" Grid.Column="2"
+                                 Minimum="0"
+                                 Maximum="10"
+                                 x:Name="stp_criancas"/>
+                    </Grid>
+
+                    <Label Text="Escolha a sua suíte:"
+                           Style="{StaticResource Explicativos}"
+                           Margin="0,15,0,0"/>
+
+                    <Picker Title=" Selecione uma suíte"
+                            HorizontalTextAlignment="Center"
+                            ItemDisplayBinding="{Binding Descricao}"
+                            x:Name="pck_suites"/>
+
+                    <Frame BackgroundColor="#ccc" Margin="10">
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Período de estadia:"
+                                   Style="{StaticResource Explicativos}"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Check-In"/>
+
+                                <DatePicker x:Name="dtpck_checkin"
+                                            Format="dd/MM/yyyy"
+                                            DateSelected="dtpck_checkin_DataSelected"/>
+                                
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Check-out:"/>
+                                <DatePicker x:Name="dtpck_checkout"
+                                            Format="dd/MM/yyyy"/>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                       
+                    </Frame>
+                </StackLayout>
+                   
+            </Frame>
+          
+          
+          
+        </StackLayout>
   </ContentView.Content>
 </ContentView>

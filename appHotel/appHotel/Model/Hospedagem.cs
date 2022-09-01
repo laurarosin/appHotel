@@ -47,7 +47,7 @@ namespace appHotel.Model
         }
         public double ValorTotal
         {
-            get => ((Quantidade_adultos * Quarto.ValorDiariaAdulto) + ((QuantidadeCrianca * Quarto.ValorDiariaCrianca)) + Estadia;
+            get => ((Quantidade_adultos * Quarto.ValorDiariaAdulto) + ((QuantidadeCrianca * Quarto.ValorDiariaCrianca)) + Estadia);
 
         }
 
