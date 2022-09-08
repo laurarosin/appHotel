@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="View\ContratacaoHospedagem.xaml">
+    <EmbeddedResource Update="View\ContratacaoHosp.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Hospedagem.xaml">

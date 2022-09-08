@@ -10,11 +10,21 @@ using Xamarin.Forms.Xaml;
 namespace appHotel.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ContratacaoHospedagem : ContentView
+    public partial class ContratacaoHosp : ContentPage
     {
-        public ContratacaoHospedagem()
+        public ContratacaoHosp()
         {
             InitializeComponent();
+        }
+
+        private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

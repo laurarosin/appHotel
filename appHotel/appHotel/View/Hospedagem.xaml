@@ -1,10 +1,69 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="appHotel.View.Hospedagem">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
-  </ContentView.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xaml="http://xamarin.com/schemas/2014/forms"
+             x:Class="appHotel.View.Hospedagem"
+             BackgroundColor="DarkOliveGreen">
+                
+  <ContentPage.Content>
+      <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Detalhes da Estadia" Style="{StaticResource Título}"/>
+
+            <Label Text="{Binding Path=Quarto.Descricao}"
+                 TextColor="White"
+                 TextTransform="Uppercase"
+                 FontAttributes="Bold"
+                 Margin="0,15,0,10"/>
+
+            <Frame Margin="10">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Adultos:"/>
+                        <Label Text="{Binding Quantidade_adultos}" Style="{StaticResource Valores}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Crianças:"/>
+                        <Label Text="{Binding QuantidadeCrianca}" Style="{StaticResource Valores}"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame Margin="10">
+                <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*,*,*">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Check-In:"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Check-Out:"/>
+                    <Label Grid.Row="0" Grid.Column="2" Text="Estadia: "/>
+
+                    <Label Grid.Row="1" Grid.Column="0"
+                           Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}"
+                           Style="{StaticResource Valores}"/>
+
+                    <Label Grid.Row="1" Grid.Column="1"
+                           Text="{xaml:Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}"
+                           Style="{StaticResource Valores}"/>
+
+                    <Label Grid.Row="1" Grid.Column="2"
+                           Text="{Binding Estadia}"
+                           Style="{StaticResource Valores}"/>
+                </Grid>
+            </Frame>
+
+            <Frame Margin="10">
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Valor da hospedagem:"/>
+                            <Span Text="{Binding ValorTotal,StringFormat='{}{0:c}'}"
+                                  FontSize="Large"
+                                  TextColor="DarkViolet"
+                                  FontAttributes="Bold"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+
+            <Button Text="VOLTAR" Clicked="Button_Clicked"/>
+
+        </StackLayout>
+  </ContentPage.Content>
 </ContentView>

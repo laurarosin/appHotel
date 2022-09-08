@@ -4,6 +4,7 @@
              x:Class="appHotel.App">
     <Application.Resources>
 
+
         <Style TargetType="Label" x:Key="fontePersonalizada">
             <Setter Property="FontFamily">
                 <Setter.Value>
@@ -12,7 +13,7 @@
             </Setter>
         </Style>
 
-        <Style TargetType="Label" x:Key="Título" BaseResourceKey="fomtePersonalizada">
+        <Style TargetType="Label" x:Key="Titulo" BaseResourceKey="fontePersonalizada">
             <Setter Property="FontSize" Value="54"/>
             <Setter Property="TextColor" Value="White"/>
         </Style>
@@ -41,7 +42,9 @@
             <Setter Property="TextColor" Value="White"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="CornerRadius" Value="10"/>
-        </Style>    
-        
+        </Style>
+
+
     </Application.Resources>
+    
 </Application>
