@@ -6,7 +6,7 @@
                 
   <ContentPage.Content>
       <StackLayout VerticalOptions="CenterAndExpand">
-            <Label Text="Detalhes da Estadia" Style="{StaticResource Título}"/>
+            <Label Text="Detalhes da Estadia" Style="{StaticResource Titulo}"/>
 
             <Label Text="{Binding Path=Quarto.Descricao}"
                  TextColor="White"

@@ -44,7 +44,7 @@ namespace appHotel
 
             Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
 
-            MainPage = new NavigationPage(new View.ContratacaoHosp());
+            MainPage = new NavigationPage(new View .ContratacaoHosp());
         }
 
         protected override void OnStart()

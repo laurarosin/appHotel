@@ -2,11 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="appHotel.View.ContratacaoHosp"
-             BackgroundColor="DarkGoldenrod">
+             BackgroundColor="DarkMagenta">
+
     <ContentPage.Content>
         <StackLayout>
+
             <StackLayout VerticalOptions="CenterAndExpand">
-                <Label Text="Cálculo da Diária" Style="{StaticResource Titulo}"/>
+                <Label Text="Cálculo da Diária"  Style="{StaticResource Titulo}" />
 
                 <Frame Margin="10">
                     <StackLayout>
@@ -20,7 +22,7 @@
                             <Stepper Grid.Row="0" Grid.Column="2"
                                  Minimum="0"
                                  Maximum="10"
-                                 x:Name=" stp_adultos"/>
+                                 x:Name="stp_adultos"/>
 
                             <Label Grid.Row="1" Grid.Column="0"
                                Text="Crianças"/>
@@ -37,7 +39,7 @@
                         </Grid>
 
                         <Label Text="Escolha a sua suíte:"
-                           Style="{StaticResource Explicativos}"
+                          
                            Margin="0,15,0,0"/>
 
                         <Picker Title=" Selecione uma suíte"
@@ -48,7 +50,7 @@
                         <Frame BackgroundColor="#ccc" Margin="10">
                             <StackLayout HorizontalOptions="CenterAndExpand">
                                 <Label Text="Período de estadia:"
-                                   Style="{StaticResource Explicativos}"/>
+                                   />
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Check-In"/>
 
@@ -68,13 +70,23 @@
 
                         </Frame>
                         <Button Text="Calcular Hospedagem" Clicked="Button_Clicked"/>
+
+
+
+
+
+
+
+
+
+
                     </StackLayout>
 
                 </Frame>
 
-
-
             </StackLayout>
+
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
