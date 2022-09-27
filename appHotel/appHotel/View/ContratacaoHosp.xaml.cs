@@ -15,6 +15,7 @@ namespace appHotel.View
         public ContratacaoHosp()
         {
             InitializeComponent();
+            pck_suites.ItemsSource =App.Suites;
         }
 
         private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
